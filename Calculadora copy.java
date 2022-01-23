@@ -4,7 +4,7 @@ import Salida.Output;
 import Calculo.Matematicas;
 
 
-public class Calculadora{
+public class CalculadoraRepo{
     private static final int SUMA = 1;
     private static final int RESTA = 2;
     private static final int MULTIPLICACION = 3;
