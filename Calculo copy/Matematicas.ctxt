@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=Matematicas
+comment1.params=sumando1\ sumando2
+comment1.target=int\ sumar(int,\ int)
+comment2.params=minuendo\ sustraendo
+comment2.target=int\ restar(int,\ int)
+comment3.params=multiplicando\ multiplicador
+comment3.target=int\ multiplicar(int,\ int)
+comment4.params=dividendo\ divisor
+comment4.target=int\ dividir(int,\ int)
+numComments=5
