@@ -12,6 +12,7 @@ public class Calculadora{
     //Declarar constantes
     public static void main (String[] args) {
         int opcion;
+	Logger logger = new Logger();
         do  {
             do {
                 Output.mostrarOpciones();
@@ -19,13 +20,16 @@ public class Calculadora{
             }while(Validator.noEsOpcionValida(opcion));
             switch(opcion){
                 case SUMA:
+			logger.log ("suma"); 
                 Output.mostrarOperando("sumando");
                 int sumando1 = Input.pedirNumero();
                 int sumando2 = Input.pedirNumero();
                 int resultado = Matematicas.sumar(sumando1, sumando2);
-                Output.mostrarResultado(resultado); break;
+                Output.mostrarResultado(resultado); 
+			break;
                 
                 case RESTA:
+			logger.log ("resta");
                 Output.mostrarOperando("minuendo");
                 int minuendo = Input.pedirNumero();
                 Output.mostrarOperando("sustraendo");
@@ -34,6 +38,7 @@ public class Calculadora{
                 Output.mostrarResultado(resultado); break;
                 
                 case MULTIPLICACION:
+			logger.log ("multiplicación");
                 Output.mostrarOperando("multiplicando");
                 int multiplicando = Input.pedirNumero();
                 Output.mostrarOperando("multiplicador");
@@ -42,6 +47,7 @@ public class Calculadora{
                 Output.mostrarResultado(resultado); break;
                 
                 case DIVISION: 
+				logger.log ("división");
                     Output.mostrarOperando("dividendo");
                     int dividendo = Input.pedirNumero();
                     int divisor;
