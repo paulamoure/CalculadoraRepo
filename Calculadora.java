@@ -1,7 +1,9 @@
-import Validation.Validator;
+
 import Entrada.Input;
-import Salida.Output;
+import Validation.Validator;
 import Calculo.Matematicas;
+import Salida.Output;
+import Salida.Logger;
 
 public class Calculadora{
     private static final int SUMA = 1;
