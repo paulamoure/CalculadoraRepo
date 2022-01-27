@@ -14,6 +14,7 @@ public class Calculadora{
     public static void main (String[] args) {
         int opcion;
 	    Logger logger = new Logger();
+	    System.out.println("Bienvenido a esta calculadora!");
         do  {
             do {
                 Output.mostrarOpciones();
