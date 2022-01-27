@@ -29,3 +29,4 @@ replay_pid*
 
 # BlueJ project files
 *.bluej
+*.DS_Store
