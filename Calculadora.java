@@ -1,4 +1,3 @@
-
 import Entrada.Input;
 import Validation.Validator;
 import Calculo.Matematicas;
@@ -10,11 +9,13 @@ public class Calculadora{
     private static final int RESTA = 2;
     private static final int MULTIPLICACION = 3;
     private static final int DIVISION = 4;
+    private static final int AREA_TRIANGULO = 5;
+    private static final int AREA_CUADRADO = 6;
     //Declarar constantes
     public static void main (String[] args) {
         int opcion;
-	    Logger logger = new Logger();
-	    System.out.println("Bienvenido a esta calculadora!");
+        Logger logger = new Logger();
+        System.out.println("Bienvenido a esta calculadora!");
         do  {
             do {
                 Output.mostrarOpciones();
@@ -51,7 +52,7 @@ public class Calculadora{
                     break;
                 
                 case DIVISION: 
-				    logger.log ("división");
+                    logger.log ("división");
                     Output.mostrarOperando("dividendo");
                     int dividendo = Input.pedirNumero();
                     int divisor;
@@ -60,6 +61,22 @@ public class Calculadora{
                         divisor = Input.pedirNumero();
                     }while (Validator.esIgual0(divisor));
                     resultado = Matematicas.dividir(dividendo, divisor);
+                    Output.mostrarResultado(resultado); break;
+                    
+                case AREA_TRIANGULO:
+                    logger.log("area del triangulo");
+                    Output.mostrarOperando("base");
+                    int base = Input.pedirNumero();
+                    Output.mostrarOperando("altura");
+                    int altura = Input.pedirNumero();
+                    resultado = Matematicas.calcularAreaTriangulo(base, altura);
+                    Output.mostrarResultado(resultado); break;
+                    
+                case AREA_CUADRADO:
+                    logger.log("area del cuadrado");
+                    Output.mostrarOperando("lado");
+                    int lado = Input.pedirNumero();
+                    resultado = Matematicas.calcularAreaCuadrado(lado);
                     Output.mostrarResultado(resultado); break;
             }      
         }while(Validator.userNoQuiereSalir(opcion));
