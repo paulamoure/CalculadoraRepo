@@ -1,9 +1,8 @@
 package Calculo;
-import geometria.Triangulo;
-import geometria.Cuadrado;
+import geometria.*;
 public class Matematicas {
-    static Triangulo triangulo;
-    static Cuadrado cuadrado;
+    static Figura triangulo;
+    static Figura cuadrado;
     public static int sumar(int sumando1, int sumando2){
         return sumando1 + sumando2;
     }
