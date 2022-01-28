@@ -1,11 +1,14 @@
 package geometria;
 
-public class Cuadrado {
+public class Cuadrado extends Figura {
     int lado;
     public Cuadrado(){
         lado = 0;
     }
-    public int area(int lado) {
+    public Cuadrado(int lado){
+        this.lado = lado;
+    }
+    public int area() {
         return lado*lado;
     }
 }

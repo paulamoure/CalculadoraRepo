@@ -17,13 +17,13 @@ public class Matematicas {
         return dividendo/divisor;
     }
     public static int calcularAreaTriangulo(int base, int altura){
-        triangulo = new Triangulo();
-        int area = triangulo.area(base, altura);
+        triangulo = new Triangulo(base, altura);
+        int area = triangulo.area();
         return area;
     }
     public static int calcularAreaCuadrado(int lado){
-        cuadrado = new Cuadrado();
-        int area = cuadrado.area(lado);
+        cuadrado = new Cuadrado(lado);
+        int area = cuadrado.area();
         return area;
     }
 }
