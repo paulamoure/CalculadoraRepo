@@ -1,20 +1,32 @@
 package Calculo;
 import geometria.Triangulo;
 import geometria.Cuadrado;
+import operations.Sum;
+import operations.Resta;
+import operations.Multiplicar;
+import operations.Division;
 public class Matematicas {
     static Triangulo triangulo;
     static Cuadrado cuadrado;
+    static Sum sum;
+    static Resta resta;
+    static Multiplicar multiplicar;
+    static Division division;
     public static int sumar(int sumando1, int sumando2){
-        return sumando1 + sumando2;
+        sum = new Sum(sumando1, sumando2);
+        return sum.operar();
     }
     public static int restar(int minuendo, int sustraendo){
-        return minuendo - sustraendo;
+        resta = new Resta(minuendo, sustraendo);
+        return resta.operar();
     }
     public static int multiplicar(int multiplicando, int multiplicador){
-        return multiplicando * multiplicador;
+        multiplicar = new Multiplicar(multiplicando, multiplicador);
+        return multiplicar.operar();
     }
     public static int dividir(int dividendo, int divisor){
-        return dividendo/divisor;
+        division = new Division(dividendo, divisor);
+        return division.operar();
     }
     public static int calcularAreaTriangulo(int base, int altura){
         triangulo = new Triangulo(base, altura);
