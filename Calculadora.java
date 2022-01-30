@@ -10,74 +10,76 @@ public class Calculadora{
     private static final int DIVISION = 4;
     private static final int AREA_TRIANGULO = 5;
     private static final int AREA_CUADRADO = 6;
+    private static final int SALIR = 7;
     //Declarar constantes
     public static void main (String[] args) {
         int opcion;
         Logger logger = new Logger();
-        System.out.println("Bienvenido a esta calculadora!");
+        System.out.println("¡Os damos la bienvenida a esta calculadora!");
         do  {
             do {
                 Output.mostrarOpciones();
-                opcion = Input.pedirNumero();
-            }while(Validator.noEsOpcionValida(opcion));
+                opcion = Input.pedirOpcion();
+            }while(Validator.valorNoEstaEnRango(SUMA, opcion, SALIR));
             switch(opcion){
                 case SUMA:
                     logger.log ("suma");
-                    Output.mostrarOperando("sumando");
-                    int sumando1 = Input.pedirNumero();
-                    int sumando2 = Input.pedirNumero();
+                    Output.mostrarPedirOperando("sumando 1:");
+                    int sumando1 = Input.pedirOperando();
+                    Output.mostrarPedirOperando("sumando 2:");
+                    int sumando2 = Input.pedirOperando();
                     int resultado = Matematicas.sumar(sumando1, sumando2);
                     Output.mostrarResultado(resultado);
                     break;
                 
                 case RESTA:
                     logger.log ("resta");
-                    Output.mostrarOperando("minuendo");
-                    int minuendo = Input.pedirNumero();
-                    Output.mostrarOperando("sustraendo");
-                    int sustraendo = Input.pedirNumero();
+                    Output.mostrarPedirOperando("minuendo:");
+                    int minuendo = Input.pedirOperando();
+                    Output.mostrarPedirOperando("sustraendo:");
+                    int sustraendo = Input.pedirOperando();
                     resultado = Matematicas.restar(minuendo, sustraendo);
                     Output.mostrarResultado(resultado);
                     break;
                 
                 case MULTIPLICACION:
                     logger.log ("multiplicación");
-                    Output.mostrarOperando("multiplicando");
-                    int multiplicando = Input.pedirNumero();
-                    Output.mostrarOperando("multiplicador");
-                    int multiplicador = Input.pedirNumero();
+                    Output.mostrarPedirOperando("multiplicando");
+                    int multiplicando = Input.pedirOperando();
+                    Output.mostrarPedirOperando("multiplicador");
+                    int multiplicador = Input.pedirOperando();
                     resultado = Matematicas.multiplicar(multiplicando, multiplicador);
                     Output.mostrarResultado(resultado);
                     break;
                 
                 case DIVISION: 
                     logger.log ("división");
-                    Output.mostrarOperando("dividendo");
-                    int dividendo = Input.pedirNumero();
+                    Output.mostrarPedirOperando("dividendo");
+                    int dividendo = Input.pedirOperando();
                     int divisor;
                     do{
-                        Output.mostrarOperando("divisor");
-                        divisor = Input.pedirNumero();
-                    }while (Validator.esIgual0(divisor));
+                        Output.mostrarPedirOperando("divisor");
+                        divisor = Input.pedirOperando();
+                    }while (Validator.esIgualA0(divisor));
                     resultado = Matematicas.dividir(dividendo, divisor);
                     Output.mostrarResultado(resultado); break;
                     
                 case AREA_TRIANGULO:
-                    logger.log("area del triangulo");
-                    Output.mostrarOperando("base");
-                    int base = Input.pedirNumero();
-                    Output.mostrarOperando("altura");
-                    int altura = Input.pedirNumero();
+                    logger.log("hallar el área del triangulo");
+                    Output.mostrarPedirOperando("base:");
+                    int base = Input.pedirOperando();
+                    Output.mostrarPedirOperando("altura:");
+                    int altura = Input.pedirOperando();
                     resultado = Matematicas.calcularAreaTriangulo(base, altura);
                     Output.mostrarResultado(resultado); break;
                     
                 case AREA_CUADRADO:
-                    logger.log("area del cuadrado");
-                    Output.mostrarOperando("lado");
-                    int lado = Input.pedirNumero();
+                    logger.log("hallar el área del cuadrado");
+                    Output.mostrarPedirOperando("lado:");
+                    int lado = Input.pedirOperando();
                     resultado = Matematicas.calcularAreaCuadrado(lado);
                     Output.mostrarResultado(resultado); break;
             }      
-        }while(Validator.userNoQuiereSalir(opcion));
+        }while(Validator.usuarioNoQuiereSalir(opcion, SALIR));
     }
 }

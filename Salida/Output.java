@@ -9,8 +9,9 @@ public class Output {
         System.out.println("5. Calcular area de un triangulo");
         System.out.println("6. Calcular area de un cuadrado");
         System.out.println("7. Salir");
+        System.out.println("Escoja opción:");
     }
-    public static void mostrarOperando(String operando){
+    public static void mostrarPedirOperando(String operando){
         System.out.println("Introduzca el " + operando);
     }
     public static void mostrarResultado(int resultado){

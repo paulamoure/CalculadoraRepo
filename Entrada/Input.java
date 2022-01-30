@@ -2,11 +2,17 @@ package Entrada;
 import java.util.Scanner;
 
 public class Input {
-    public static int pedirNumero(){
-        Scanner leer=new Scanner(System.in);
-        System.out.println("Escriba un número: ");
-        int operando=leer.nextInt();
+
+    private static int pedirEntero(){
+        Scanner lector=new Scanner(System.in);
+        int numero = lector.nextInt();
         //poner int antes es una declaración (o String, etc)
-        return operando;
+        return numero;
+    }
+    public static int pedirOperando(){
+        return pedirEntero();
+    }
+    public static int pedirOpcion(){
+        return pedirEntero();
     }
 }

@@ -1,7 +1,10 @@
 package Salida;
 
 public class Logger {
+	private final String OUTPUT = "Ha elegido la operación %s";
+
 	public void log(String operacion) {
-		System.out.println("Ha elegido la operación " + operacion);
+		String output = String.format(OUTPUT, operacion);
+		System.out.println(output);
 	}
 }
