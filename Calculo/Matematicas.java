@@ -1,6 +1,5 @@
 package Calculo;
-import geometria.Triangulo;
-import geometria.Cuadrado;
+import geometria.*;
 import operations.Sum;
 import operations.Resta;
 import operations.Multiplicar;
