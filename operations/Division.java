@@ -11,7 +11,7 @@ public class Division{
         divisor = 0;
     }
     public Division(int divisor, int dividendo){
-        //lo mismo pero asignas al constructor parametros
+        //lo mismo pero pasas parametros al constructor
         this.dividendo = dividendo;
         this.divisor = divisor;
     }

@@ -12,7 +12,6 @@ public class Sum extends Operacion{
         this.sumando2 = sumando2;
     }
     public int operar(){
-        int suma = sumando1 + sumando2; 
-        return suma;
+        return sumando1 + sumando2; 
     }
 }

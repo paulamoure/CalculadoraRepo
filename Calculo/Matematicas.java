@@ -19,13 +19,11 @@ public class Matematicas {
         return division.operar();
     }
     public static int calcularAreaTriangulo(int base, int altura){
-        Triangulo triangulo = new Triangulo(base, altura);
-        int area = triangulo.area();
-        return area;
+        Figura triangulo = new Triangulo(base, altura);
+        return triangulo.area();
     }
     public static int calcularAreaCuadrado(int lado){
-        Cuadrado cuadrado = new Cuadrado(lado);
-        int area = cuadrado.area();
-        return area;
+        Figura cuadrado = new Cuadrado(lado);
+        return cuadrado.area();
     }
 }
