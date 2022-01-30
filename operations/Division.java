@@ -1,6 +1,6 @@
 package operations;
 
-public class Division{
+public class Division extends Operacion{
     int dividendo;
     int divisor;
     //inicializar lo que va a usar
